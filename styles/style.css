@@ -15,6 +15,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-image:var(--bg-image);
 }
 
 pre {
@@ -79,7 +80,7 @@ pre {
   
 }
 .header_lamp_title{
-  display:drid;
+  display: grid;
   color:var( --text-color);
   align-items: start;
 }
