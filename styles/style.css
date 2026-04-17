@@ -1,5 +1,155 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
+
+
+
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  display: grid;
+  min-block-size: 100dvb;
+  margin: 0;
+  color: var(--text-color);
+  font-family: var(--main-font-family), sans-serif;
+  font-size: var(--main-text-size, 18px);
+  background-color: var(--bg-color);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
+
+pre {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.header__theme-menu {
+  position: fixed;
+  inset-block-start: 1em;
+  inset-inline-end: 1em;
+}
+
+.header__theme-menu-list {
+  display: flex;
+  gap: 0.5em;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.header__theme-menu-button{
+  border: 1px solid currentColor;
+  padding: 0.5em 1em;
+  color: currentColor;
+  font-family: inherit;
+  font-size: inherit;
+  background-color: var(--bg-color);
+  cursor: pointer;
+}
+
+.header__theme-menu-button:hover {
+  color: var(--bg-color);
+  background-color: var(--text-color);
+}
+
+.header__theme-menu-button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+/*----------header-----------*/
+
+.header {
+  display: grid;
+  place-items: center;
+  padding: 5px 20px;
+  color: var(--text-color);
+ background-position:center;
+ 
+}
+
+.lamp {
+  place-self: start end; /* Выравнивает элемент по верху (start) и правому краю (end) */
+  width: 50px;
+  height: 50px;
+  background-color:red;
+  border-radius: 50%;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap:20px;
+  
+}
+.header_lamp_title{
+  display:drid;
+  color:var( --text-color);
+  align-items: start;
+}
+
+.decorated-zone{
+  border-style: inset ;
+}
+
+/*----------main-----------*/
+
+/**---main_item*/
+.main_item{
+  display:grid;
+  gap:20px;
+}
+
+.main_list{
+  display: grid;
+  gap:20px;
+}
+.main_list_card{
+  display: grid;
+  gap:10px;
+}
+
+/**main_item_titles**/
+.article {
+  inline-size: 60%;
+  margin: auto;
+  padding: 2em;
+ 
+ 
+}
+
+.main_item_title{
+background-color:transparent;
+color:#FF0070;
+
+}
+.main_list_title{
+background-color:#FF0070;;
+color:#000028;
+}
+
+.main_list_item_article_title{
+background-color:#FF0070;;
+color:#000028;
+font-weight: normal;
+}
+
+/**-text-**/
+.main_list_item_article_text{
+margin-block-end: 1em;
+
+}
+
+/**-section4-*/
+.item__picture {
+  display: block;
+  max-inline-size: 375px;
+  margin: 0 auto;
+}
+
+
+/*----------footer-----------*/
+.footer {
+  padding: 20px 40px;
+  color: #fff;
+  background-color: #5f0dee;
+  min-inline-size: 375px;
+}
+
+
