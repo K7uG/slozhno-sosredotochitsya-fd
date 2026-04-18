@@ -12,4 +12,5 @@
   --h2-font-size: clamp(1.875rem, 1.6607rem + 0.9524vw, 2.375rem);
   --h3-font-size: clamp(1.5rem, 1.3125rem + 0.8333vw, 1.9375rem);
   --bg-image:url('./images/cover-image-dark.png');
+  --accent-color:#FF0070;
 }

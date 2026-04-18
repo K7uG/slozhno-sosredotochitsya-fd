@@ -1,10 +1,8 @@
 /* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
 
-
-
-
 .page {
   display: grid;
+  min-width: 375px;
   min-block-size: 100dvb;
   margin: 0;
   color: var(--text-color);
@@ -15,7 +13,8 @@
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-image:var(--bg-image);
+  background-image: url(./images/cover-image.png);
+  position: relative;
 }
 
 pre {
@@ -24,20 +23,25 @@ pre {
 }
 
 .header__theme-menu {
-  position: fixed;
   inset-block-start: 1em;
   inset-inline-end: 1em;
+
+  place-self: start end;
+  position: absolute;
+  top: 75px;
+  right: 10px;
 }
 
 .header__theme-menu-list {
-  display: flex;
+  display: block;
   gap: 0.5em;
   margin: 0;
   padding: 0;
   list-style: none;
+  
 }
 
-.header__theme-menu-button{
+.header__theme-menu-button {
   border: 1px solid currentColor;
   padding: 0.5em 1em;
   color: currentColor;
@@ -60,50 +64,124 @@ pre {
 
 .header {
   display: grid;
-  place-items: center;
-  padding: 5px 20px;
+  padding: 0;
+  margin: 0;
   color: var(--text-color);
- background-position:center;
- 
+
+  height: 100vh; /* 100% от высоты окна браузера */
+  min-width: 668px;
+  gap: 20px;
 }
 
 .lamp {
   place-self: start end; /* Выравнивает элемент по верху (start) и правому краю (end) */
-  width: 50px;
-  height: 50px;
-  background-color:red;
+  width: 9px;
+  height: 9px;
+  background-color: red;
   border-radius: 50%;
-  display: grid;
-  align-items: center;
-  justify-content: center;
-  gap:20px;
-  
-}
-.header_lamp_title{
-  display: grid;
-  color:var( --text-color);
-  align-items: start;
+  display: flex;
+  place-self: start end;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+
 }
 
-.decorated-zone{
-  border-style: inset ;
+.header_lamp_title {
+  display: flex;
+  color: var(--text-color);
+  place-self: start end;
+  position: absolute;
+  top: 10px;
+  right: 38px;
+  width: 33px;
+  height: 26px;
+  border: 3px solid red;
+}
+/*.header_lamp_title::after{*/
+/*place-self: start end; /* Выравнивает элемент по верху (start) и правому краю (end) */
+/*width: 9px;
+  height: 9px;
+  background-color:red;
+  border-radius: 50%;
+  display: flex;
+  place-self: start end;
+  position:absolute;
+  top: 10px;
+  right: 10px;
+  border:1px solid red;
+  opacity: 1;
+}*/
+
+/*.dark-theme .header_lamp_title::after{
+  opacity: 1;
+}*/
+
+.header_title {
+  position: absolute;
+  display: flex;
+  font-size: 116px;
+  font-family: IBMPlexMono-Bold, sans-serif;
+  top: 238px;
+  left: 10px;
+  color: #db00ff;
+  text-transform: lowercase;
+  overflow-wrap: break-word;
+  word-break: break-all;
+  /*inline-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);*/
+  text-shadow: 4px 4px 0 var(--accent-color);
+}
+
+.first_word {
+  position: absolute;
+
+  top: 238px;
+  left: 10px;
+
+  opacity: 1;
+}
+.second_word {
+  display: block;
+
+  position: absolute;
+
+  top: 338px;
+  left: 10px;
+
+  opacity: 1;
+}
+
+.header_text {
+  background-color: #ff0070;
+  color: #000028;
+  display: flex;
+  position: absolute;
+
+  max-width: inherit;
+
+  top: 485px;
+  left: 10px;
+}
+
+.decorated-zone {
+  border-style: inset;
 }
 
 /*----------main-----------*/
 
 /**---main_item*/
-.main_item{
-  display:grid;
-  gap:20px;
+.main_item {
+  display: grid;
+  gap: 20px;
 }
 
-.main_list{
+.main_list {
   display: grid;
-  gap:20px;
+  gap: 20px;
 }
-.main_list_card{
+.main_list_card {
   display: grid;
-  gap:10px;
+  gap: 10px;
 }
 
 /**main_item_titles**/
@@ -111,39 +189,48 @@ pre {
   inline-size: 60%;
   margin: auto;
   padding: 2em;
- 
- 
 }
 
-.main_item_title{
-background-color:transparent;
-color:#FF0070;
-
+.main_item_title {
+  background-color: transparent;
+  color: #ff0070;
 }
-.main_list_title{
-background-color:#FF0070;;
-color:#000028;
+.main_list_title {
+  background-color: #ff0070;
+  color: #000028;
 }
 
-.main_list_item_article_title{
-background-color:#FF0070;;
-color:#000028;
-font-weight: normal;
+.main_list_item_article_title {
+  background-color: #ff0070;
+  color: #000028;
+  font-weight: normal;
 }
 
 /**-text-**/
-.main_list_item_article_text{
-margin-block-end: 1em;
-
+.main_list_item_article_text {
+  margin-block-end: 1em;
 }
 
 /**-section4-*/
 .item__picture {
-  display: block;
   max-inline-size: 375px;
   margin: 0 auto;
+  flex: 1 1 280px; /* или flex-grow: 1; flex-basis: calc(25% – 16px*3/4); для адаптивности */
+  min-width: 250px;
+}
+.main_list_card {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
+/*---card--*/
+
+.main_item_list_card {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
 
 /*----------footer-----------*/
 .footer {
@@ -152,5 +239,3 @@ margin-block-end: 1em;
   background-color: #5f0dee;
   min-inline-size: 375px;
 }
-
-
