@@ -3,7 +3,7 @@
 .page {
   display: grid;
   min-width: 375px;
-  min-block-size: 100dvb;
+  /*min-block-size: 100dvb;*/
   margin: 0;
   color: var(--text-color);
   font-family: var(--main-font-family), sans-serif;
@@ -15,17 +15,17 @@
   background-attachment: fixed;
   background-image: url(./images/cover-image.png);
   position: relative;
+  gap: 50px;
 }
 
-pre {
+/*pre {
   font-family: inherit;
   font-size: inherit;
-}
+}*/
 
 .header__theme-menu {
   inset-block-start: 1em;
   inset-inline-end: 1em;
-
   place-self: start end;
   position: absolute;
   top: 75px;
@@ -38,7 +38,6 @@ pre {
   margin: 0;
   padding: 0;
   list-style: none;
-  
 }
 
 .header__theme-menu-button {
@@ -67,9 +66,8 @@ pre {
   padding: 0;
   margin: 0;
   color: var(--text-color);
-
   height: 100vh; /* 100% от высоты окна браузера */
-  min-width: 668px;
+  min-width: inherit;
   gap: 20px;
 }
 
@@ -84,7 +82,6 @@ pre {
   position: absolute;
   top: 10px;
   right: 10px;
-
 }
 
 .header_lamp_title {
@@ -120,7 +117,7 @@ pre {
 .header_title {
   position: absolute;
   display: flex;
-  font-size: 116px;
+
   font-family: IBMPlexMono-Bold, sans-serif;
   top: 238px;
   left: 10px;
@@ -128,7 +125,7 @@ pre {
   text-transform: lowercase;
   overflow-wrap: break-word;
   word-break: break-all;
-  /*inline-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);*/
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
@@ -152,13 +149,11 @@ pre {
 }
 
 .header_text {
-  background-color: #ff0070;
+  background-color: var(--title-decor);
   color: #000028;
   display: flex;
   position: absolute;
-
   max-width: inherit;
-
   top: 485px;
   left: 10px;
 }
@@ -168,7 +163,10 @@ pre {
 }
 
 /*----------main-----------*/
-
+main {
+  display: grid;
+  gap: 50px;
+}
 /**---main_item*/
 .main_item {
   display: grid;
@@ -193,15 +191,15 @@ pre {
 
 .main_item_title {
   background-color: transparent;
-  color: #ff0070;
+  color: var(--title-decor);
 }
 .main_list_title {
-  background-color: #ff0070;
+  background-color: var(--title-decor);
   color: #000028;
 }
 
 .main_list_item_article_title {
-  background-color: #ff0070;
+  background-color: var(--title-decor);
   color: #000028;
   font-weight: normal;
 }
@@ -215,8 +213,6 @@ pre {
 .item__picture {
   max-inline-size: 375px;
   margin: 0 auto;
-  flex: 1 1 280px; /* или flex-grow: 1; flex-basis: calc(25% – 16px*3/4); для адаптивности */
-  min-width: 250px;
 }
 .main_list_card {
   display: flex;
@@ -234,6 +230,8 @@ pre {
 
 /*----------footer-----------*/
 .footer {
+  display: grid;
+  width: inherit;
   padding: 20px 40px;
   color: #fff;
   background-color: #5f0dee;
