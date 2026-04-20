@@ -3,7 +3,7 @@
 .page {
   display: grid;
   min-width: 375px;
-  /*min-block-size: 100dvb;*/
+  min-block-size: 100dvb;
   margin: 0;
   color: var(--text-color);
   font-family: var(--main-font-family), sans-serif;
@@ -82,6 +82,8 @@
   position: absolute;
   top: 10px;
   right: 10px;
+  /*border:1px red inset;*/
+
 }
 
 .header_lamp_title {
@@ -115,52 +117,30 @@
 }*/
 
 .header_title {
-  position: absolute;
   display: flex;
-
+  position: absolute;
   font-family: IBMPlexMono-Bold, sans-serif;
   top: 238px;
   left: 10px;
   color: #db00ff;
   text-transform: lowercase;
-  overflow-wrap: break-word;
-  word-break: break-all;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
-.first_word {
-  position: absolute;
 
-  top: 238px;
-  left: 10px;
-
-  opacity: 1;
-}
-.second_word {
-  display: block;
-
-  position: absolute;
-
-  top: 338px;
-  left: 10px;
-
-  opacity: 1;
-}
 
 .header_text {
   background-color: var(--title-decor);
   color: #000028;
-  display: flex;
+  display: block;
   position: absolute;
   max-width: inherit;
   top: 485px;
   left: 10px;
+    
 }
 
-.decorated-zone {
-  border-style: inset;
-}
 
 /*----------main-----------*/
 main {
@@ -177,16 +157,18 @@ main {
   display: grid;
   gap: 20px;
 }
-.main_list_card {
-  display: grid;
-  gap: 10px;
-}
+
 
 /**main_item_titles**/
 .article {
   inline-size: 60%;
   margin: auto;
   padding: 2em;
+}
+
+.main_article{
+display:grid;
+
 }
 
 .main_item_title {
@@ -201,13 +183,59 @@ main {
 .main_list_item_article_title {
   background-color: var(--title-decor);
   color: #000028;
-  font-weight: normal;
+  
+ font-family: IBMPlexMono-Bold,sans-serif;
 }
+
+@media (width >= 768px) {
+.main_article{
+display:grid;
+grid-area: main_article;
+}
+ 
+.main_list{
+display:grid;
+grid-area: main_list;
+}
+
+}
+
+
 
 /**-text-**/
 .main_list_item_article_text {
-  margin-block-end: 1em;
+  /* Отступы — сохранятся при любом количестве параграфов */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0;
+
+  /* Тень согласно макету (пример параметров) */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
+  /* Цвет текста для согласованности с эффектами */
+  color: var(--text-color);
+
+  /* Плавный переход для эффектов при наведении и фокусе */
+  transition: all 0.3s ease;
 }
+
+/* Эффект при наведении — нижняя граница в цвет текста */
+.main_list_item_article_text:hover {
+  border-bottom: 2px solid currentColor;
+}
+
+/* Эффект при фокусе — рамка по всем сторонам в цвет текста */
+.main_list_item_article_text:focus-visible { 
+
+  border: 2px solid  currentColor;
+  padding: 2px; /* Компенсируем добавление рамки */
+}
+
+
+
+
+
+
 
 /**-section4-*/
 .item__picture {
@@ -225,7 +253,7 @@ main {
 .main_item_list_card {
   display: grid;
   gap: 16px;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+
 }
 
 /*----------footer-----------*/

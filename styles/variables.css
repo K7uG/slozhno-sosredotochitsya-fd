@@ -3,7 +3,7 @@
   и их переопределение под различные устройства
 */
 :root {
-  --main-font-family: 'Open Sans';
+  --main-font-family: IBMPlexMono-Regular,'Open Sans';
   --main-text-size: clamp(0.875rem, 0.7679rem + 0.4762vw, 1.125rem);
   --bg-color:#000028;
   --text-color: #FFF1F7;
