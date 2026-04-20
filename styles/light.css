@@ -13,6 +13,6 @@
   --text-color: #000028;
   
 }
-/.header{
+.header{
   --bg-image:url('./images/cover-image-light.png');
   }

@@ -83,7 +83,6 @@
   top: 10px;
   right: 10px;
   /*border:1px red inset;*/
-
 }
 
 .header_lamp_title {
@@ -128,8 +127,6 @@
   text-shadow: 4px 4px 0 var(--accent-color);
 }
 
-
-
 .header_text {
   background-color: var(--title-decor);
   color: #000028;
@@ -138,9 +135,7 @@
   max-width: inherit;
   top: 485px;
   left: 10px;
-    
 }
-
 
 /*----------main-----------*/
 main {
@@ -148,16 +143,31 @@ main {
   gap: 50px;
 }
 /**---main_item*/
-.main_item {
+.section {
   display: grid;
   gap: 20px;
 }
+
+/*.section-why {
+
+}
+
+.section-causes {
+
+}
+
+.section-advices {
+
+}
+
+.section-pictures {
+
+}*/
 
 .main_list {
   display: grid;
   gap: 20px;
 }
-
 
 /**main_item_titles**/
 .article {
@@ -166,9 +176,8 @@ main {
   padding: 2em;
 }
 
-.main_article{
-display:grid;
-
+.main_article {
+  display: grid;
 }
 
 .main_item_title {
@@ -183,24 +192,26 @@ display:grid;
 .main_list_item_article_title {
   background-color: var(--title-decor);
   color: #000028;
-  
- font-family: IBMPlexMono-Bold,sans-serif;
+
+  font-family: IBMPlexMono-Bold, sans-serif;
 }
 
 @media (width >= 768px) {
-.main_article{
-display:grid;
-grid-area: main_article;
-}
- 
-.main_list{
-display:grid;
-grid-area: main_list;
-}
+  .main_article {
+    display: grid;
+    grid-area: main_article;
+  }
 
+  .main_list {
+    display: grid;
+    grid-area: main_list;
+  }
+
+  .section-pictures {
+  }
 }
-
-
+@media ((width > 1024px)) {
+}
 
 /**-text-**/
 .main_list_item_article_text {
@@ -225,17 +236,10 @@ grid-area: main_list;
 }
 
 /* Эффект при фокусе — рамка по всем сторонам в цвет текста */
-.main_list_item_article_text:focus-visible { 
-
-  border: 2px solid  currentColor;
+.main_list_item_article_text:focus-visible {
+  border: 2px solid currentColor;
   padding: 2px; /* Компенсируем добавление рамки */
 }
-
-
-
-
-
-
 
 /**-section4-*/
 .item__picture {
@@ -253,7 +257,6 @@ grid-area: main_list;
 .main_item_list_card {
   display: grid;
   gap: 16px;
-
 }
 
 /*----------footer-----------*/
