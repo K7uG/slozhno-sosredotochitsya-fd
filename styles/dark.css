@@ -9,8 +9,14 @@
     Так стили написанные ниже будут иметь больший вес,
     чем стили в медиазапросе предпочтений пользователя
   */
-   --bg-color:#000028;
-  --text-color: #F1B2CE;
-   --bg-image:url('./images/cover-image-dark.png');
-   --title-decor:#ff0070;
+    --main-font-family: IBMPlexMono-Regular,'Open Sans';
+  --main-text-size: clamp(0.875rem, 0.7679rem + 0.4762vw, 1.125rem);
+  --bg-color:#000028;
+  --text-color: #FFF1F7;
+  
+  --h2-font-size: clamp(1.875rem, 1.6607rem + 0.9524vw, 2.375rem);
+  --h3-font-size: clamp(1.5rem, 1.3125rem + 0.8333vw, 1.9375rem);
+  --bg-image:url('./images/cover-image-dark.png');
+  --accent-color:#FF0070;
+  --title-decor:#ff0070;
 }

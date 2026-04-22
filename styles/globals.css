@@ -4,12 +4,15 @@
 *::before,
 *::after {
   box-sizing: border-box;
+    outline: 1px solid #db00ff;
 }
 
 body {
   min-inline-size: 375px;
   max-inline-size: 1440px;
+  /*max-height: 6770px;*/
   margin: 0 auto;
+  font-size: ;
 }
 
 h1,
