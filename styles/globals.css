@@ -4,7 +4,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-    outline: 1px solid #db00ff;
+   /* outline: 1px solid #db00ff;*/
 }
 
 body {

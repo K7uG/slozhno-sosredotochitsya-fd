@@ -17,8 +17,8 @@
   background-image: url(./images/cover-image.png);
   position: relative;
   gap: 50px;
-  outline: 1px solid #db00ff;
-  line-height:23.4px;
+  /*outline: 1px solid #db00ff;*/
+  line-height: 23.4px;
 }
 
 .header__theme-menu {
@@ -39,28 +39,35 @@
 }
 
 .header__theme-menu-button {
-  border: 1px solid currentColor;
   padding: 0.5em 1em;
   color: currentColor;
   font-family: inherit;
-  font-size: inherit;
-  background-color: var(--bg-color);
+  font-size: 18px;
+  font-style: regular;
+  text-transform: lowercase;
+  /*background-color: var(--bg-color);**/
+  cursor: pointer;
+  outline: none;
+  background-color: transparent;
+  border: none;
   cursor: pointer;
 }
 
 .header__theme-menu-button:hover {
-  color: var(--bg-color);
-  background-color: var(--text-color);
+  outline: none;
+  border: 1px solid var(--button_border_color);
 }
 
-.header__theme-menu-button:disabled {
+/*.header__theme-menu-button:disabled {
   opacity: 0.5;
   pointer-events: none;
-}
+
+}*/
 /*----------header-----------*/
 
 .header {
   display: grid;
+
   padding: 0;
   margin: 0;
   color: var(--text-color);
@@ -84,16 +91,19 @@
   /*border:1px red inset;*/
 }
 
-.header_lamp_title {
+.rec {
   display: flex;
-  color: var(--text-color);
+  color: var(--title-decor);
   place-self: start end;
   position: absolute;
   top: 10px;
   right: 38px;
   width: 33px;
   height: 26px;
- 
+}
+
+.header__theme-menu-item {
+  color: var(--title-decor);
 }
 /*.header_lamp_title::after{*/
 /*place-self: start end; /* Выравнивает элемент по верху (start) и правому краю (end) */
@@ -116,16 +126,16 @@
 
 .header_title {
   display: flex;
-  margin: auto;
+  margin: 238px 10px 0 10px;
   font-family: IBM Plex Mono bold;
-font-weight: 700;
-font-style: Bold;
-font-size: 116px;
-leading-trim: NONE;
-line-height: 83%;
-letter-spacing: 0%;
-
-
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 116px;
+  leading-trim: NONE;
+  line-height: 83%;
+  letter-spacing: 0.1em;
+  width: 355px;
+  max-height: 155px;
 }
 
 .title {
@@ -134,7 +144,6 @@ letter-spacing: 0%;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   text-shadow: 4px 4px 0 var(--accent-color);
   font-family: IBMPlexMono-Bold, sans-serif;
-  
 }
 
 .header_text {
@@ -142,17 +151,19 @@ letter-spacing: 0%;
   color: #000028;
   display: grid;
   position: absolute;
-  max-width: inherit;
+  max-width: 355px;
   top: 485px;
   left: 10px;
-  margin:55px 10px 66px 10px;
 
-min-width: 355;
-min-height: 117;
+  min-height: 117;
 
-
-
-
+  font-family: inherit;
+  font-weight: 700;
+  font-style: Bold;
+  font-size: 18px;
+  leading-trim: NONE;
+  line-height: 23.4px;
+  letter-spacing: 0%;
 }
 
 /*----------main-----------*/
@@ -217,7 +228,10 @@ main {
 @media (width >= 768px) {
   .main_article {
     display: grid;
+    grid-template-columns: 1fr 1fr; /* Два столбца равной ширины */
+  gap: 20px; /* Отступы между элементами */
     grid-area: main_article;
+
   }
 
   .main_list {
@@ -227,6 +241,18 @@ main {
 
   .section-pictures {
   }
+
+  .header{
+    display: grid;
+  grid-template-columns: 1fr 1fr; /* Два столбца равной ширины */
+   gap: 20px; /* Отступы между элементами */
+  }
+  
+.header_text{
+display:grid;
+grid-column: 2;
+
+}
 }
 @media ((width > 1024px)) {
 }
@@ -260,25 +286,18 @@ main {
   padding: 2px; /* Компенсируем добавление рамки */
 }
 
-.link_article_text{
-color:#F1B2CE;
-text-shadow: 1px 1px 0 var(--accent-color);
-text-decoration:none;
-
+.link_article_text {
+  color: #f1b2ce;
+  text-shadow: 1px 1px 0 var(--accent-color);
+  text-decoration: none;
 }
-.link_article_text:hover{
-text-decoration: underline;
+.link_article_text:hover {
+  text-decoration: underline;
 }
 
 .link_article_text:focus-visible {
-  outline: 1px solid #F1B2CE;
+  outline: 1px solid #f1b2ce;
 }
-
-
-
-
-
-
 
 /*--sectionn3--*/
 .main_list_causes {
@@ -336,5 +355,5 @@ text-decoration: underline;
   margin: auto;
   padding: 20px;
 }
-.decorated-zone { 
+.decorated-zone {
 }
