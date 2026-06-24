@@ -19,10 +19,7 @@
   --accent-color: #ff0070;
   --title-decor: #ff0070;
   
-  body.dark-theme .rec {
-   opacity: 1;
-   
-}
+
 
 }
 
@@ -39,10 +36,15 @@
     --title-decor: #ff0070;
   }
 
-  body.dark-theme .rec {
-   opacity: 1;
+
+}
+
+@media(max-width:768px){
   
 }
+
+@media(min-width:1024px){
+  
 }
 
 
