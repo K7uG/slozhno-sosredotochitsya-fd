@@ -2,7 +2,7 @@
 
 .page {
   min-width: 375px;
-  min-block-size: 100dvb;
+  min-block-size: 100vh;
   /*min-block-size: 100dvb;*/
   margin: 0 auto;
   color: var(--text-color);
@@ -14,7 +14,6 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-image: url(./images/cover-image.png);
-  position: relative;
 
   /*outline: 1px solid #db00ff;*/
 }
@@ -22,13 +21,10 @@
 /*----header--------*/
 
 .header {
-  min-block-size: 100vh;
+  height: 100vh;
   display: grid;
-  inset-block: 100vh;
-  padding: 10px;
-  margin: 0;
+  padding: 20px;
   color: var(--text-color);
-  
   grid-template-rows: 1fr min-content 1fr;
 }
 
@@ -37,19 +33,14 @@
 .header__theme-menu {
   display: flex;
   justify-content: flex-end;
-  padding: 0;
-  margin: 0;
 }
 
 .header__theme-menu-list {
-
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 13px;
-  position: absolute;
-  top: 75px;
-  right: 10px;
+  justify-content: center;
 }
 
 .header__theme-menu-button {
@@ -71,35 +62,27 @@
   border: 1px solid var(--button_border_color);
 }
 
-/*.header__theme-menu-button:disabled {
-  opacity: 0.5;
-  pointer-events: none;
-
-}*/
-
 /*---Decorated zone--*/
 
-.decorated-zone {
-  padding: 10px;
-  margin: 10px;
-}
 /*---рамка----*/
 .frame::before {
-  place-self: start end; /* Выравнивает элемент по верху (start) и правому краю (end) */
   position: absolute;
-   display:flex;
+  place-self: start end;
   content: "";
+
   border-top: 1px solid red;
   border-right: 1px solid red;
   inline-size: 25px;
   block-size: 25px;
   margin: 0px;
+
+  min-width: 0;
 }
 
 .frame::after {
   place-self: end start;
   position: absolute;
- display:flex;
+
   content: "";
   border-bottom: 1px solid red;
   border-left: 1px solid red;
@@ -107,6 +90,7 @@
   block-size: 25px;
   margin: 0;
   box-sizing: border-box;
+  min-width: 0;
 }
 
 /*-------REC------------------*/
@@ -143,57 +127,90 @@
 /*---no focus---*/
 
 .header__title {
+  
   margin-left: 0;
 }
 .title-decor {
   font-weight: 700;
   background-color: var(--accent-color);
   font-size: var(--font-size);
-  line-height: 23.4px;
+  /*ine-height: 23.4px;*/
   color: var(--sub-text-color);
+  font-style: Bold;
+  line-height: 83%;
+  letter-spacing: 0%;
 }
 
 .title {
-  display:block;
   color: #db00ff;
   text-transform: lowercase;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   text-shadow: 4px 4px 0 var(--accent-color);
   font-family: IBMPlexMono-Bold, sans-serif;
-  line-height: 82.5%;
-  padding: 0 0 55px 0;
+  line-height: 83%;
 }
 
 /*----header_text--*/
 .header_text {
   max-inline-size: 355px;
   max-block-size: 117px;
-  justify-self: end;
-  align-self: center;
   background-color: var(--title-decor);
   color: #000028;
-  display: flex;
-  /*place-self: center center;*/
+
   font-family: inherit;
   font-weight: 700;
   line-height: 23.4px;
-  /*margin: 0 0 66px 0;*/
-  font-weight: 700;
   font-size: var(--font-size);
+  justify-self: start;
+  align-self: center;
 }
 
-/*----------main-----------*/
-main {
-  display: grid;
-  gap: 50px;
-}
-/**---main_item*/
-.section {
-  display: grid;
-  gap: 20px;
-}
+@media (width >= 768px) {
+  /*--header---*/
+  .header_text {
+    justify-self: end;
+    align-self: center;
+  }
+  @media (width >= 1024px) {
+    /*--header---*/
+    .header_text {
+      max-width: 491px;
+      max-height: 71px;
+      justify-self: end;
+      align-self: center;
+    }
 
-/*.section-why {
+    .header__theme-menu {
+      justify-content: center;
+    }
+
+    .header__theme-menu-list {
+      flex-direction: row;
+      align-items: start;
+
+      justify-content: center;
+    }
+    .title{
+    
+     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+      margin-left: -20px;
+      
+        
+    }
+  }
+
+  /*----------main-----------*/
+  main {
+    display: grid;
+    gap: 50px;
+  }
+  /**---main_item*/
+  .section {
+    display: grid;
+    gap: 20px;
+  }
+
+  /*.section-why {
 
 }
 
@@ -209,90 +226,90 @@ main {
 
 }*/
 
-.main_list {
-  display: grid;
-  gap: 20px;
-}
+  .main_list {
+    display: grid;
+    gap: 20px;
+  }
 
-/**main_item_titles**/
-.article {
-  inline-size: 60%;
-  margin: auto;
-  padding: 2em;
-}
+  /**main_item_titles**/
+  .article {
+    inline-size: 60%;
+    margin: auto;
+    padding: 2em;
+  }
 
-.main_article {
-  display: grid;
-}
+  .main_article {
+    display: grid;
+  }
 
-.main_item_title {
-  background-color: transparent;
-  color: var(--title-decor);
-}
-.main_list_title {
-  background-color: var(--title-decor);
-  color: #000028;
-}
+  .main_item_title {
+    background-color: transparent;
+    color: var(--title-decor);
+  }
+  .main_list_title {
+    background-color: var(--title-decor);
+    color: #000028;
+  }
 
-.main_list_item_article_title {
-  background-color: var(--title-decor);
-  color: #000028;
+  .main_list_item_article_title {
+    background-color: var(--title-decor);
+    color: #000028;
 
-  font-family: IBMPlexMono-Bold, sans-serif;
-}
+    font-family: IBMPlexMono-Bold, sans-serif;
+  }
 
-/**-text-**/
-.main_list_item_article_text {
-  /* Отступы — сохранятся при любом количестве параграфов */
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  padding: 0;
+  /**-text-**/
+  .main_list_item_article_text {
+    /* Отступы — сохранятся при любом количестве параграфов */
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    padding: 0;
 
-  /* Тень согласно макету (пример параметров) */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    /* Тень согласно макету (пример параметров) */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 
-  /* Цвет текста для согласованности с эффектами */
-  color: var(--text-color);
+    /* Цвет текста для согласованности с эффектами */
+    color: var(--text-color);
 
-  /* Плавный переход для эффектов при наведении и фокусе */
-  transition: all 0.3s ease;
-  font-size: 18px;
-}
+    /* Плавный переход для эффектов при наведении и фокусе */
+    transition: all 0.3s ease;
+    font-size: 18px;
+  }
 
-/* Эффект при наведении — нижняя граница в цвет текста */
-.main_list_item_article_text:hover {
-  border-bottom: 2px solid currentColor;
-}
+  /* Эффект при наведении — нижняя граница в цвет текста */
+  .main_list_item_article_text:hover {
+    border-bottom: 2px solid currentColor;
+  }
 
-/* Эффект при фокусе — рамка по всем сторонам в цвет текста */
-.main_list_item_article_text:focus-visible {
-  border: 2px solid currentColor;
-  padding: 2px; /* Компенсируем добавление рамки */
-}
+  /* Эффект при фокусе — рамка по всем сторонам в цвет текста */
+  .main_list_item_article_text:focus-visible {
+    border: 2px solid currentColor;
+    padding: 2px; /* Компенсируем добавление рамки */
+  }
 
-.link_article_text {
-  color: #f1b2ce;
-  text-shadow: 1px 1px 0 var(--accent-color);
-  text-decoration: none;
-}
-.link_article_text:hover {
-  text-decoration: underline;
-}
+  .link_article_text {
+    color: #f1b2ce;
+    text-shadow: 1px 1px 0 var(--accent-color);
+    text-decoration: none;
+  }
+  .link_article_text:hover {
+    text-decoration: underline;
+  }
 
-.link_article_text:focus-visible {
-  outline: 1px solid #f1b2ce;
-}
+  .link_article_text:focus-visible {
+    outline: 1px solid #f1b2ce;
+  }
 
-/*--sectionn3--*/
-.main_list_causes {
-  display: grid;
-  gap: 20px;
-  padding: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr));
-  /* Опишите логику колонок */
-  list-style-type: none;
-}
-/*.main_list_causes li{
+  /*--sectionn3--*/
+  .main_list_causes {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr));
+    /* Опишите логику колонок */
+    list-style-type: none;
+  }
+  /*.main_list_causes li{
    border: 1px solid #000;
   padding: 50px;
   font-family: 'Open Sans', sans-serif;
@@ -304,83 +321,48 @@ main {
   aspect-ratio: 1 / 1;
 }*/
 
-/**-section4-*/
-/*.item__picture {
+  /**-section4-*/
+  /*.item__picture {
   max-inline-size: 375px;
   margin: 0 auto;
 }*/
-/*.main_list_card {
+  /*.main_list_card {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
 }*/
 
-/*---card--*/
+  /*---card--*/
 
-/*.main_item_list_card {
+  /*.main_item_list_card {
       display: block;
     max-inline-size: 100%;
     object-fit: cover;
 }/*
 
 /*----------footer-----------*/
-.footer {
-  display: grid;
-  margin: 0 auto;
-  width: inherit;
-  padding: 20px 40px;
-  color: #fff;
-  min-inline-size: 375px;
-  height: 100vh; /* 100% от высоты окна браузера */
-  min-width: inherit;
-  min-height: 668px;
-  gap: 20px;
-}
-.footer_title {
-  margin: auto;
-  padding: 20px;
-}
-.decorated-zone {
-}
-
-/*---media----*/
-
-@media (width >= 768px) {
-  /*--header---*/
-.header{
-  display:grid;
-  grid-template-rows: repeat(auto-fill,200px);
-
-}
-
-  
-
-.header__theme-menu-list {
-  display: flex;
-  flex-direction:row;
-  gap: 10px;
-}
-
-
-/*-----no focus--*/
-
-.header__title {
-
-  display: grid;
-    margin-left: -20px;
-
-}
-  .header_text {
+  .footer {
     display: grid;
-    max-inline-size: 491px;
-    max-block-size: 71px;
-  
-   
+    margin: 0 auto;
+    width: inherit;
+    padding: 20px 40px;
+    color: #fff;
+    min-inline-size: 375px;
+    height: 100vh; /* 100% от высоты окна браузера */
+    min-width: inherit;
+    min-height: 668px;
+    gap: 20px;
   }
-}
+  .footer_title {
+    margin: auto;
+    padding: 20px;
+  }
+  .decorated-zone {
+  }
 
+  /*---media----*/
 
-/*---main--*/
+  /*---main--*/
 
   .main_article {
     display: grid;
