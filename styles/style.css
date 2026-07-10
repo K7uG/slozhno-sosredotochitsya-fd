@@ -302,7 +302,7 @@
 
   /**-section4- section-pictures---------------*/
  .section-pictures{
-  margin: 20px;
+  padding:20px;
  }
 
 
@@ -339,9 +339,7 @@
     margin: auto;
     padding: 20px;
   }
-  .decorated-zone {
-  }
-
+ 
   /*---media----*/
 
   /*---main--*/
