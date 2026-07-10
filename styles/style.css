@@ -26,6 +26,7 @@
   padding: 20px;
   color: var(--text-color);
   grid-template-rows: 1fr min-content 1fr;
+  gap: 10px;
 }
 
 /*-----menu---*/
@@ -116,7 +117,7 @@
   background-image: url("images/circle-gap.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  vertical-align: middle; /* чтобы выровнять по тексту */
+
   stroke: black; /* цвет обводки */
 }
 
@@ -127,18 +128,7 @@
 /*---no focus---*/
 
 .header__title {
-  
   margin-left: 0;
-}
-.title-decor {
-  font-weight: 700;
-  background-color: var(--accent-color);
-  font-size: var(--font-size);
-  /*ine-height: 23.4px;*/
-  color: var(--sub-text-color);
-  font-style: Bold;
-  line-height: 83%;
-  letter-spacing: 0%;
 }
 
 .title {
@@ -171,63 +161,74 @@
     justify-self: end;
     align-self: center;
   }
-  @media (width >= 1024px) {
-    /*--header---*/
-    .header_text {
-      max-width: 491px;
-      max-height: 71px;
-      justify-self: end;
-      align-self: center;
-    }
+}
 
-    .header__theme-menu {
-      justify-content: center;
-    }
-
-    .header__theme-menu-list {
-      flex-direction: row;
-      align-items: start;
-
-      justify-content: center;
-    }
-    .title{
-    
-     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-      margin-left: -20px;
-      
-        
-    }
+@media (width >= 1024px) {
+  /*--header---*/
+  .header_text {
+    max-width: 491px;
+    max-height: 71px;
+    justify-self: end;
+    align-self: center;
   }
 
-  /*----------main-----------*/
+  .header__theme-menu {
+    justify-content: center;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+    align-items: start;
+
+    justify-content: center;
+  }
+  .title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-left: -20px;
+  }
+
+  /*----------main--------------------------------------------------------------------*/
   main {
-    display: grid;
     gap: 50px;
   }
   /**---main_item*/
-  .section {
-    display: grid;
-    gap: 20px;
+
+  @media (width >= 768px) {
+    .section-why {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      margin: 20px;
+      gap: 20px;
+    }
+    .section-advices {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      margin: 20px;
+      gap: 20px;
+    }
   }
 
-  /*.section-why {
+  @media (width >= 1024px) {
+    .main_list_causes {
+      display: grid;
+      gap: 20px;
+      padding: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr));
+      /* Опишите логику колонок */
+      list-style-type: none;
+    }
+  }
 
-}
+  /*.section-causes {
+  }
 
-.section-causes {
+  .section-advices {
+  }
 
-}
-
-.section-advices {
-
-}
-
-.section-pictures {
-
-}*/
-
-  .main_list {
-    display: grid;
+  .section-pictures {
+  }*/
+   .main_list {
+    display: block;
     gap: 20px;
   }
 
@@ -236,10 +237,6 @@
     inline-size: 60%;
     margin: auto;
     padding: 2em;
-  }
-
-  .main_article {
-    display: grid;
   }
 
   .main_item_title {
@@ -302,10 +299,9 @@
 
   /*--sectionn3--*/
   .main_list_causes {
-    display: grid;
+    display: block;
     gap: 20px;
     padding: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr));
     /* Опишите логику колонок */
     list-style-type: none;
   }
@@ -363,18 +359,6 @@
   /*---media----*/
 
   /*---main--*/
-
-  .main_article {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Два столбца равной ширины */
-    gap: 20px; /* Отступы между элементами */
-    grid-area: main_article;
-  }
-
-  .main_list {
-    display: grid;
-    grid-area: main_list;
-  }
 
   .main_list_card {
     display: grid;
