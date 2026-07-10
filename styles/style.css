@@ -300,16 +300,19 @@
   aspect-ratio: 1 / 1;
 }*/
 
-  /**-section4-*/
-  /*.item__picture {
-  max-inline-size: 375px;
-  margin: 0 auto;
-}*/
-  /*.main_list_card {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-}*/
+  /**-section4- section-pictures---------------*/
+ .section-pictures{
+  margin: 20px;
+ }
+
+
+ .item__picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;          /* заполняет блок, не искажая пропорции (обрезает края) */
+  display: block; 
+  padding:10px;
+ }
 
   /*---card--*/
 
