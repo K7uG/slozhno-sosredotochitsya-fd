@@ -213,24 +213,13 @@
       display: grid;
       gap: 20px;
       padding: 20px;
-      grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr));
+      grid-template-columns: repeat(3,1fr);
       /* Опишите логику колонок */
       list-style-type: none;
     }
   }
 
-  /*.section-causes {
-  }
 
-  .section-advices {
-  }
-
-  .section-pictures {
-  }*/
-   .main_list {
-    display: block;
-    gap: 20px;
-  }
 
   /**main_item_titles**/
   .article {
@@ -298,13 +287,7 @@
   }
 
   /*--sectionn3--*/
-  .main_list_causes {
-    display: block;
-    gap: 20px;
-    padding: 20px;
-    /* Опишите логику колонок */
-    list-style-type: none;
-  }
+
   /*.main_list_causes li{
    border: 1px solid #000;
   padding: 50px;
@@ -418,5 +401,4 @@
 </div>*/
 }
 
-@media ((width > 1024px)) {
-}
+
