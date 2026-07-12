@@ -15,7 +15,6 @@
   background-attachment: fixed;
   background-image: url(./images/cover-image.png);
 
-  /*outline: 1px solid #db00ff;*/
 }
 
 /*----header--------*/
@@ -155,6 +154,173 @@
   align-self: center;
 }
 
+/*----------main--------------------------------------------------------------------*/
+main {
+  gap: 50px;
+}
+/**---main_item*/
+
+/**main_item_titles**/
+.article {
+  inline-size: 60%;
+  margin: auto;
+  padding: 2em;
+}
+
+.main_item_title {
+  background-color: transparent;
+  color: var(--title-decor);
+}
+.main_list_title {
+  background-color: var(--title-decor);
+  color: #000028;
+}
+
+.main_list_item_article_title {
+  background-color: var(--title-decor);
+  color: #000028;
+
+  font-family: IBMPlexMono-Bold, sans-serif;
+}
+
+/**-text-**/
+.main_list_item_article_text {
+  /* Отступы — сохранятся при любом количестве параграфов */
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  padding: 0;
+
+  /* Тень согласно макету (пример параметров) */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+
+  /* Цвет текста для согласованности с эффектами */
+  color: var(--text-color);
+
+  /* Плавный переход для эффектов при наведении и фокусе */
+  transition: all 0.3s ease;
+  font-size: 18px;
+}
+
+/* Эффект при наведении — нижняя граница в цвет текста */
+.main_list_item_article_text:hover {
+  border-bottom: 2px solid currentColor;
+}
+
+/* Эффект при фокусе — рамка по всем сторонам в цвет текста */
+.main_list_item_article_text:focus-visible {
+  border: 2px solid currentColor;
+  padding: 2px; /* Компенсируем добавление рамки */
+}
+
+.link_article_text {
+  color: #f1b2ce;
+  text-shadow: 1px 1px 0 var(--accent-color);
+  text-decoration: none;
+}
+.link_article_text:hover {
+  text-decoration: underline;
+}
+
+.link_article_text:focus-visible {
+  outline: 1px solid #f1b2ce;
+}
+
+/*--sectionn3--*/
+
+
+
+/**-section4- section-pictures---------------*/
+.section-pictures {
+  padding: 20px;
+}
+
+.item__picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* заполняет блок, не искажая пропорции (обрезает края) */
+  display: block;
+  padding: 10px;
+}
+
+/*---card--*/
+
+
+/*----------footer-----------*/
+.footer {
+  min-block-size: 100vh;
+  padding: 20px;
+  position: relative;
+  display: grid;
+
+
+}
+.footer_title {
+  margin: auto;
+  padding: 20px;
+
+}
+ .frame::after{
+margin: 10px;
+ }
+  .frame::before {
+margin: 10px;
+ }
+
+
+/*---media----*/
+
+/*---main--*/
+
+.main_list_card {
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0px;
+}
+
+.item__picture {
+  display: block;
+  max-inline-size: 100%;
+  object-fit: cover;
+}
+
+#item-0 {
+  grid-row-start: 1;
+  grid-column-start: 1;
+
+  grid-row-end: 2;
+  grid-column-end: 3;
+}
+#item-1 {
+  grid-row-start: 1;
+  grid-column-start: 3;
+
+  grid-row-end: 3;
+  grid-column-end: 4;
+}
+#item-2 {
+  grid-row-start: 2;
+  grid-column-start: 1;
+
+  grid-row-end: 5;
+  grid-column-end: 2;
+}
+#item-3 {
+  grid-row-start: 2;
+  grid-column-start: 2;
+
+  grid-row-end: 3;
+  grid-column-end: 3;
+}
+#item-4 {
+  grid-row-start: 3;
+  grid-column-start: 2;
+
+  grid-row-end: 5;
+  grid-column-end: 4;
+}
+
+/*----------media----*/
 @media (width >= 768px) {
   /*--header---*/
   .header_text {
@@ -186,220 +352,36 @@
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     margin-left: -20px;
   }
-
-  /*----------main--------------------------------------------------------------------*/
-  main {
-    gap: 50px;
-  }
-  /**---main_item*/
-
-  @media (width >= 768px) {
-    .section-why {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      margin: 20px;
-      gap: 20px;
-    }
-    .section-advices {
-      display: grid;
-      grid-template-columns: 1fr 2fr;
-      margin: 20px;
-      gap: 20px;
-    }
-  }
-
-  @media (width >= 1024px) {
-    .main_list_causes {
-      display: grid;
-      gap: 20px;
-      padding: 20px;
-      grid-template-columns: repeat(3,1fr);
-      /* Опишите логику колонок */
-      list-style-type: none;
-    }
-  }
-
-
-
-  /**main_item_titles**/
-  .article {
-    inline-size: 60%;
-    margin: auto;
-    padding: 2em;
-  }
-
-  .main_item_title {
-    background-color: transparent;
-    color: var(--title-decor);
-  }
-  .main_list_title {
-    background-color: var(--title-decor);
-    color: #000028;
-  }
-
-  .main_list_item_article_title {
-    background-color: var(--title-decor);
-    color: #000028;
-
-    font-family: IBMPlexMono-Bold, sans-serif;
-  }
-
-  /**-text-**/
-  .main_list_item_article_text {
-    /* Отступы — сохранятся при любом количестве параграфов */
-    margin-top: 1rem;
-    margin-bottom: 1rem;
-    padding: 0;
-
-    /* Тень согласно макету (пример параметров) */
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-
-    /* Цвет текста для согласованности с эффектами */
-    color: var(--text-color);
-
-    /* Плавный переход для эффектов при наведении и фокусе */
-    transition: all 0.3s ease;
-    font-size: 18px;
-  }
-
-  /* Эффект при наведении — нижняя граница в цвет текста */
-  .main_list_item_article_text:hover {
-    border-bottom: 2px solid currentColor;
-  }
-
-  /* Эффект при фокусе — рамка по всем сторонам в цвет текста */
-  .main_list_item_article_text:focus-visible {
-    border: 2px solid currentColor;
-    padding: 2px; /* Компенсируем добавление рамки */
-  }
-
-  .link_article_text {
-    color: #f1b2ce;
-    text-shadow: 1px 1px 0 var(--accent-color);
-    text-decoration: none;
-  }
-  .link_article_text:hover {
-    text-decoration: underline;
-  }
-
-  .link_article_text:focus-visible {
-    outline: 1px solid #f1b2ce;
-  }
-
-  /*--sectionn3--*/
-
-  /*.main_list_causes li{
-   border: 1px solid #000;
-  padding: 50px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  font-size: 32px;
-  font-style: italic;
-  line-height: 1.37;
-  background-color: #fff;
-  aspect-ratio: 1 / 1;
-}*/
-
-  /**-section4- section-pictures---------------*/
- .section-pictures{
-  padding:20px;
- }
-
-
- .item__picture {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;          /* заполняет блок, не искажая пропорции (обрезает края) */
-  display: block; 
-  padding:10px;
- }
-
-  /*---card--*/
-
-  /*.main_item_list_card {
-      display: block;
-    max-inline-size: 100%;
-    object-fit: cover;
-}/*
-
-/*----------footer-----------*/
-  .footer {
-    display: grid;
-    margin: 0 auto;
-    width: inherit;
-    padding: 20px 40px;
-    color: #fff;
-    min-inline-size: 375px;
-    height: 100vh; /* 100% от высоты окна браузера */
-    min-width: inherit;
-    min-height: 668px;
-    gap: 20px;
-  }
-  .footer_title {
-    margin: auto;
-    padding: 20px;
-  }
- 
-  /*---media----*/
-
-  /*---main--*/
-
-  .main_list_card {
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 0px;
-  }
-
-  .item__picture {
-    display: block;
-    max-inline-size: 100%;
-    object-fit: cover;
-  }
-
-  #item-0 {
-    grid-row-start: 1;
-    grid-column-start: 1;
-
-    grid-row-end: 2;
-    grid-column-end: 3;
-  }
-  #item-1 {
-    grid-row-start: 1;
-    grid-column-start: 3;
-
-    grid-row-end: 3;
-    grid-column-end: 4;
-  }
-  #item-2 {
-    grid-row-start: 2;
-    grid-column-start: 1;
-
-    grid-row-end: 5;
-    grid-column-end: 2;
-  }
-  #item-3 {
-    grid-row-start: 2;
-    grid-column-start: 2;
-
-    grid-row-end: 3;
-    grid-column-end: 3;
-  }
-  #item-4 {
-    grid-row-start: 3;
-    grid-column-start: 2;
-
-    grid-row-end: 5;
-    grid-column-end: 4;
-  }
-
-  /*<div class="angry-grid">
-  <div id="item-0">&nbsp;</div>
-  <div id="item-1">&nbsp;</div>
-  <div id="item-2">&nbsp;</div>
-  <div id="item-3">&nbsp;</div>
-  <div id="item-4">&nbsp;</div>
-</div>*/
 }
 
+@media (width >= 768px) {
+  .section-why {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 20px;
+    gap: 20px;
+  }
+  .section-advices {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 20px;
+    gap: 20px;
+  }
+}
 
+@media (width >= 1024px) {
+  .main_list_causes {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    /* Опишите логику колонок */
+    list-style-type: none;
+  }
+
+  /*------footer-----*/
+  .footer_title {
+ margin: auto;
+  }
+
+}
