@@ -15,25 +15,17 @@
   --button_border_color: rgba(0,0,40, 1);
   --nav-hover-color: rgba(0,0,40,0.4);
 
-.rec {
-  opacity: 0;
-  }
-  
 }
 
-@media (prefers-color-scheme: light){
-:root{
+@media (prefers-color-scheme: light) {
+:root {
    --bg-color: #fff1f7;
   --text-color: #000028;
   --bg-image: url("./images/cover-image-light.png")
-  --button_border_color:#000028;
+  
 }
 
 .rec {
   opacity: 0;
   }
 }
-
-
-
-
