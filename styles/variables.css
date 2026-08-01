@@ -3,7 +3,7 @@
   и их переопределение под различные устройства
 */
 :root {
-  --main-font-family: IBMPlexMono-Regular,'Open Sans';
+  --main-font-family: 'IBM Plex mono', monospace;
   --main-text-size: clamp(0.875rem, 0.7679rem + 0.4762vw, 1.125rem);
   --bg-color:#000028;
   --text-color: #FFF1F7;
@@ -14,10 +14,12 @@
   --bg-image:url('./images/cover-image-dark.png');
   --accent-color:#FF0070;
   --title-decor:#ff0070;
-  --button_border_color:#FF0070;
+  --button_border_color:#FF0070 ;
   --font-size:18px;
+  --nav-hover-color: rgb(225,0,112,0.4);
 
- 
+ --link-color-focus-visible:#f1b2ce;
+ --main-gap:20px;
 
 }
  

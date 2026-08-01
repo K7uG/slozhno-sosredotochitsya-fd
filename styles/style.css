@@ -22,10 +22,10 @@
 .header {
   height: 100vh;
   display: grid;
-  padding: 20px;
+
   color: var(--text-color);
   grid-template-rows: 1fr min-content 1fr;
-  gap: 10px;
+
 }
 
 /*-----menu---*/
@@ -41,7 +41,24 @@
   align-items: flex-end;
   gap: 13px;
   justify-content: center;
+      margin-right: 13px;
+      margin-top: 10px;
 }
+
+
+/*---------button---------*/
+/*.header__theme-menu-button {
+border-bottom: 1px solid transparent;
+
+}
+
+.header__theme-menu-button:focus {
+outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
+border-bottom: 1px solid var(--nav-color, white);
+}*/
 
 .header__theme-menu-button {
   padding: 0 13px;
@@ -50,7 +67,7 @@
   font-size: 18px;
   font-style: normal;
   text-transform: lowercase;
-  /*background-color: var(--bg-color);**/
+  background-color: var(--bg-color);**/
   cursor: pointer;
   outline: none;
   background-color: transparent;
@@ -59,7 +76,11 @@
 
 .header__theme-menu-button:hover {
   outline: none;
-  border: 1px solid var(--button_border_color);
+  border: 1px solid var(--nav-hover-color);
+}
+
+.header__theme-menu-button:focus-visible {
+border-bottom: 1px solid var(--button_border_color);
 }
 
 /*---Decorated zone--*/
@@ -75,7 +96,6 @@
   inline-size: 25px;
   block-size: 25px;
   margin: 0px;
-
   min-width: 0;
 }
 
@@ -100,6 +120,8 @@
   color: var(--title-decor);
   place-self: start end;
   position: absolute;
+  margin: 10px;
+    
 }
 
 .rec::after {
@@ -128,6 +150,7 @@
 
 .header__title {
   margin-left: 0;
+  
 }
 
 .title {
@@ -136,7 +159,7 @@
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   text-shadow: 4px 4px 0 var(--accent-color);
   font-family: IBMPlexMono-Bold, sans-serif;
-  line-height: 83%;
+ line-height: 82.5%;
 }
 
 /*----header_text--*/
@@ -152,11 +175,13 @@
   font-size: var(--font-size);
   justify-self: start;
   align-self: center;
+          margin: 10px;
 }
 
 /*----------main--------------------------------------------------------------------*/
 main {
   gap: 50px;
+  margin:20px;
 }
 /**---main_item*/
 
@@ -222,7 +247,7 @@ main {
 }
 
 .link_article_text:focus-visible {
-  outline: 1px solid #f1b2ce;
+  outline: 1px solid var(--link-color-focus-visible);
 }
 
 /*--sectionn3--*/
@@ -230,8 +255,8 @@ main {
 
 
 /**-section4- section-pictures---------------*/
-.section-pictures {
-  padding: 20px;
+.section {
+ padding: 80px;
 }
 
 .item__picture {
@@ -327,6 +352,15 @@ margin: 10px;
     justify-self: end;
     align-self: center;
   }
+  .frame::before {
+    margin: 10px;
+}
+.frame {
+  margin:10px;
+}
+ .frame::after {
+    margin-bottom: 30px;
+}
 }
 
 @media (width >= 1024px) {
@@ -358,13 +392,13 @@ margin: 10px;
   .section-why {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    margin: 20px;
+    
     gap: 20px;
   }
   .section-advices {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    margin: 20px;
+   
     gap: 20px;
   }
 }
@@ -372,10 +406,10 @@ margin: 10px;
 @media (width >= 1024px) {
   .main_list_causes {
     display: grid;
-    gap: 20px;
+    /*gap: 20px;*/
+    gap: var(--main-gap);
     padding: 20px;
     grid-template-columns: repeat(3, 1fr);
-    /* Опишите логику колонок */
     list-style-type: none;
   }
 
