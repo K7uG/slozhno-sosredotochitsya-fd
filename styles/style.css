@@ -90,13 +90,12 @@ border-bottom: 1px solid var(--text-color);
   position: absolute;
   place-self: start end;
   content: "";
-
   border-top: 1px solid red;
   border-right: 1px solid red;
   inline-size: 25px;
   block-size: 25px;
-  margin: 0px;
-  min-width: 0;
+  margin: 10px;
+ 
 }
 
 .frame::after {
@@ -168,14 +167,13 @@ border-bottom: 1px solid var(--text-color);
   max-block-size: 117px;
   background-color: var(--title-decor);
   color: #000028;
-
   font-family: inherit;
   font-weight: 700;
   line-height: 23.4px;
   font-size: var(--font-size);
-  justify-self: start;
+  justify-self: end;
   align-self: center;
-          margin: 10px;
+  margin-right: 10px;
 }
 
 /*----------main--------------------------------------------------------------------*/
@@ -195,6 +193,7 @@ main {
 .main_item_title {
   background-color: transparent;
   color: var(--title-decor);
+  margin-bottom: 20px;
 }
 .main_list_title {
   background-color: var(--title-decor);
@@ -204,15 +203,14 @@ main {
 .main_list_item_article_title {
   background-color: var(--title-decor);
   color: #000028;
-
   font-family: IBMPlexMono-Bold, sans-serif;
+  margin-bottom: 20px;
 }
 
 /**-text-**/
 .main_list_item_article_text {
   /* Отступы — сохранятся при любом количестве параграфов */
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+ margin:10px 0 20px 0;
   padding: 0;
 
   /* Тень согласно макету (пример параметров) */
@@ -318,7 +316,7 @@ margin: 10px;
   margin:10px;
 }
  .frame::after {
-    margin-bottom: 30px;
+    margin: 10px;
 }
 
   .section-why {
