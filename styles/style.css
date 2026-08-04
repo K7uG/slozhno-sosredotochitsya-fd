@@ -2,11 +2,11 @@
 
 .page {
   min-width: 375px;
-  min-block-size: 100vh;
+ min-height: 100vh; 
   /*min-block-size: 100dvb;*/
-  margin: 0 auto;
+  margin: 0 ;
   color: var(--text-color);
-  font-family: IBM Plex mono, sans-serif;
+  font-family: var(--main-font-family,monospace), sans-serif;
   font-size: var(--main-text-size, 18px);
   background-color: var(--bg-color);
   background-size: cover;
@@ -20,6 +20,7 @@
 
 .header {
   height: 100vh;
+  min-height: 668px;
   display: grid;
 
   color: var(--text-color);
@@ -83,6 +84,7 @@ border-bottom: 1px solid var(--nav-color, white);
 /*---Decorated zone--*/
 
 /*---рамка----*/
+
 .frame::before {
   position: absolute;
   place-self: start end;
@@ -103,7 +105,7 @@ border-bottom: 1px solid var(--nav-color, white);
   border-left: 1px solid red;
   inline-size: 25px;
   block-size: 25px;
-  margin: 0;
+   margin: 10px;
   box-sizing: border-box;
   min-width: 0;
 }
@@ -151,14 +153,14 @@ border-bottom: 1px solid var(--nav-color, white);
   text-transform: lowercase;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   text-shadow: 4px 4px 0 var(--accent-color);
-  font-family: IBMPlexMono-Bold, sans-serif;
   line-height: 82.5%;
+  font-weight: 700;
 }
 
 /*----header_text--*/
 .header_text {
   max-inline-size: 355px;
-  max-block-size: 117px;
+  
   background-color: var(--title-decor);
   color: #000028;
   font-family: inherit;
@@ -173,7 +175,7 @@ border-bottom: 1px solid var(--nav-color, white);
 /*----------main--------------------------------------------------------------------*/
 main {
   gap: 50px;
-  margin: 20px;
+  margin: 0 10px;
 }
 /**---main_item*/
 
@@ -196,7 +198,7 @@ main {
 .main_list_item_article_title {
   background-color: var(--title-decor);
   color: #000028;
-  font-family: IBMPlexMono-Bold, sans-serif;
+
   margin-bottom: 20px;
 }
 
@@ -205,10 +207,7 @@ main {
   /* Отступы — сохранятся при любом количестве параграфов */
   margin: 10px 0 20px 0;
   padding: 0;
-
-  /* Тень согласно макету (пример параметров) */
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
-
+ 
   /* Цвет текста для согласованности с эффектами */
   color: var(--text-color);
 
@@ -217,10 +216,8 @@ main {
   font-size: 18px;
 }
 
-/* Эффект при наведении — нижняя граница в цвет текста */
-.main_list_item_article_text:hover {
-  border-bottom: 2px solid currentColor;
-}
+
+
 
 /* Эффект при фокусе — рамка по всем сторонам в цвет текста */
 .main_list_item_article_text:focus-visible {
@@ -229,16 +226,17 @@ main {
 }
 
 .link_article_text {
-  color: #f1b2ce;
+  color: var(--accent-color-text);
   text-shadow: 1px 1px 0 var(--accent-color);
   text-decoration: none;
 }
 .link_article_text:hover {
-  text-decoration: underline;
+   border-bottom: 1px solid var(--accent-color-text);
+   
 }
 
 .link_article_text:focus-visible {
-  outline: 1px solid var(--link-color-focus-visible);
+  outline: 1px solid var(--accent-color-text);
 }
 
 /*--sectionn3--*/
@@ -261,40 +259,38 @@ main {
 
 /*----------footer-----------*/
 .footer {
-  min-block-size: 100vh;
+  height: 100vh;
+  min-height: 668px;
   padding: 20px;
   position: relative;
   display: grid;
+   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 }
 .footer_title {
-  margin: auto;
-  padding: 20px;
+  margin: auto auto;
+ margin-left: -20px;
 }
-.frame::after {
-  margin: 10px;
-}
-.frame::before {
-  margin: 10px;
-}
+
 
 /*---media----*/
 
 /*----------media----*/
 @media (width >= 768px) {
   /*--header---*/
+ .title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-left: -20px;
+  }
+
   .header_text {
     justify-self: end;
     align-self: center;
   }
-  .frame::before {
-    margin: 10px;
-  }
+ 
   .frame {
     margin: 10px;
   }
-  .frame::after {
-    margin: 10px;
-  }
+  
 
   .section-why {
     display: grid;
@@ -312,20 +308,19 @@ main {
   /*--img---*/
   .item__picture {
     margin: 0;
-    padding: 10px;
+    padding: 0;
+    display: flex;
+    max-inline-size: 100%;
+    object-fit: cover;
+    
   }
   .main_list_card {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 0px;
+    gap:20px;
   }
 
-  .item__picture {
-    display: block;
-    max-inline-size: 100%;
-    object-fit: cover;
-  }
+ 
 
   #item-0 {
     grid-row-start: 1;
@@ -362,13 +357,18 @@ main {
     grid-row-end: 5;
     grid-column-end: 4;
   }
+
+  .footer_title {
+  margin: auto auto;
+  padding: 20px;
+}
 }
 
 @media (width >= 1024px) {
   /*--header---*/
   .header_text {
     max-width: 491px;
-    max-height: 71px;
+   
     justify-self: end;
     align-self: center;
   }
@@ -383,16 +383,13 @@ main {
 
     justify-content: center;
   }
-  .title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    margin-left: -20px;
-  }
+ 
 
   .main_list_causes {
     display: grid;
     /*gap: 20px;*/
     gap: var(--main-gap);
-    padding: 20px;
+    
     grid-template-columns: repeat(3, 1fr);
     list-style-type: none;
   }
@@ -400,5 +397,6 @@ main {
   /*------footer-----*/
   .footer_title {
     margin: auto;
+
   }
 }
