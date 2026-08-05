@@ -45,22 +45,11 @@
 }
 
 /*---------button---------*/
-/*.header__theme-menu-button {
-border-bottom: 1px solid transparent;
 
-}
-
-.header__theme-menu-button:focus {
-outline: none;
-}
-
-.header__theme-menu-button:focus-visible {
-border-bottom: 1px solid var(--nav-color, white);
-}*/
 
 .header__theme-menu-button {
   padding: 0 13px;
-  color: currentColor;
+  color:var(--accent-color);
   font-family: inherit;
   font-size: 18px;
   font-style: normal;
@@ -84,6 +73,9 @@ border-bottom: 1px solid var(--nav-color, white);
 /*---Decorated zone--*/
 
 /*---рамка----*/
+ .frame {
+    margin: 0;
+  }
 
 .frame::before {
   position: absolute;
@@ -189,6 +181,7 @@ main {
   background-color: transparent;
   color: var(--title-decor);
   margin-bottom: 20px;
+     font-size: var(--font-size);
 }
 .main_list_title {
   background-color: var(--title-decor);
@@ -216,9 +209,6 @@ main {
   font-size: 18px;
 }
 
-
-
-
 /* Эффект при фокусе — рамка по всем сторонам в цвет текста */
 .main_list_item_article_text:focus-visible {
   border: 2px solid currentColor;
@@ -226,17 +216,18 @@ main {
 }
 
 .link_article_text {
-  color: var(--accent-color-text);
-  text-shadow: 1px 1px 0 var(--accent-color);
+  color: var(--text-color);
   text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
+
 .link_article_text:hover {
-   border-bottom: 1px solid var(--accent-color-text);
+   border-bottom: 1px solid var(--text-color);
    
 }
 
 .link_article_text:focus-visible {
-  outline: 1px solid var(--accent-color-text);
+  outline: 1px solid var(--text-color);
 }
 
 /*--sectionn3--*/
@@ -268,7 +259,7 @@ main {
 }
 .footer_title {
   margin: auto auto;
- margin-left: -20px;
+  margin-left: -10px;
 }
 
 
@@ -287,21 +278,15 @@ main {
     align-self: center;
   }
  
-  .frame {
-    margin: 10px;
-  }
-  
 
   .section-why {
     display: grid;
     grid-template-columns: 1fr 2fr;
-
     gap: 20px;
   }
   .section-advices {
     display: grid;
     grid-template-columns: 1fr 2fr;
-
     gap: 20px;
   }
 
@@ -321,39 +306,33 @@ main {
   }
 
  
-
   #item-0 {
     grid-row-start: 1;
     grid-column-start: 1;
-
     grid-row-end: 2;
     grid-column-end: 3;
   }
   #item-1 {
     grid-row-start: 1;
     grid-column-start: 3;
-
     grid-row-end: 3;
     grid-column-end: 4;
   }
   #item-2 {
     grid-row-start: 2;
     grid-column-start: 1;
-
     grid-row-end: 5;
     grid-column-end: 2;
   }
   #item-3 {
     grid-row-start: 2;
     grid-column-start: 2;
-
     grid-row-end: 3;
     grid-column-end: 3;
   }
   #item-4 {
     grid-row-start: 3;
     grid-column-start: 2;
-
     grid-row-end: 5;
     grid-column-end: 4;
   }
@@ -368,7 +347,6 @@ main {
   /*--header---*/
   .header_text {
     max-width: 491px;
-   
     justify-self: end;
     align-self: center;
   }
@@ -380,7 +358,6 @@ main {
   .header__theme-menu-list {
     flex-direction: row;
     align-items: start;
-
     justify-content: center;
   }
  
@@ -394,9 +371,5 @@ main {
     list-style-type: none;
   }
 
-  /*------footer-----*/
-  .footer_title {
-    margin: auto;
 
-  }
 }

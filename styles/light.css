@@ -10,12 +10,46 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --bg-color: #fff1f7;
-  --text-color: #000028;
+  --text-color: rgba(53, 52, 48, 1);
   --bg-image: url("../images/cover-image-light.png");
-  --button_border_color: rgba(0, 0, 40, 1);
-  --nav-hover-color: rgba(0, 0, 40, 0.4);
+  
+  --nav-hover-color: rgba(50, 49, 45, 0.4);
+  --accent-color: rgba(255, 141, 203, 1);
+  --title-color: rgba(255, 194, 230, 1);
 }
 
 .theme-light .rec {
   display: none;
+}
+
+.theme-light .title {
+  text-shadow: 4px 4px 0 var(--accent-color);
+  color: var(--title-color);
+}
+
+.theme-light .main_item_title {
+  color: var(--text-color);
+}
+
+.theme-light  .header__theme-menu-button {
+  color:var(--text-color);
+}
+
+.theme-light .main_list_item_article_title {
+  color: var(--text-color);
+  background-color: var(--accent-color);
+}
+
+.theme-light .header_text {
+  color: var(--text-color);
+  background-color: var(--accent-color);
+}
+.theme-light .frame::before {
+    border-top: 1px solid var(--text-color);
+    border-right: 1px solid var(--text-color);
+}
+
+.theme-light .frame::after {
+      border-bottom: 1px solid var(--text-color);
+    border-left: 1px solid var(--text-color);
 }
