@@ -171,6 +171,12 @@ main {
 }
 /**---main_item*/
 
+/*----section_why*/
+  .section-why {
+      margin-top: 40px;
+      margin-bottom: 50px;
+  }
+
 /**main_item_titles**/
 .article {
   margin: 0;
@@ -180,8 +186,10 @@ main {
 .main_item_title {
   background-color: transparent;
   color: var(--title-decor);
+ 
   margin-bottom: 20px;
      font-size: var(--font-size);
+         max-inline-size: 315px;
 }
 .main_list_title {
   background-color: var(--title-decor);
@@ -191,9 +199,11 @@ main {
 .main_list_item_article_title {
   background-color: var(--title-decor);
   color: #000028;
-
-  margin-bottom: 20px;
+  margin-bottom: 10px;
+    font-size: var(--font-size);
 }
+
+
 
 /**-text-**/
 .main_list_item_article_text {
@@ -231,6 +241,16 @@ main {
 }
 
 /*--sectionn3--*/
+.section-advices{
+margin-top: 50px;
+}
+.advise_title {
+margin-bottom: 20px;
+}
+.title_section-advices_list_item {
+font-weight: 400;
+
+}
 
 /**-section4- section-pictures---------------*/
 
@@ -283,6 +303,8 @@ main {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 20px;
+    margin-top: 40px;
+    
   }
   .section-advices {
     display: grid;
