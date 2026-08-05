@@ -2,18 +2,18 @@
 
 .page {
   min-width: 375px;
- min-height: 100vh; 
+  min-height: 100vh;
   /*min-block-size: 100dvb;*/
-  margin: 0 ;
+  margin: 0;
   color: var(--text-color);
-  font-family: var(--main-font-family,monospace), sans-serif;
+  font-family: var(--main-font-family, monospace), sans-serif;
   font-size: var(--main-text-size, 18px);
   background-color: var(--bg-color);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-image: url(./images/cover-image.png);
+  background-image: var(--bg-image);
 }
 
 /*----header--------*/
@@ -46,10 +46,9 @@
 
 /*---------button---------*/
 
-
 .header__theme-menu-button {
   padding: 0 13px;
-  color:var(--accent-color);
+  color: var(--accent-color);
   font-family: inherit;
   font-size: 18px;
   font-style: normal;
@@ -73,9 +72,9 @@
 /*---Decorated zone--*/
 
 /*---рамка----*/
- .frame {
-    margin: 0;
-  }
+.frame {
+  margin: 0;
+}
 
 .frame::before {
   position: absolute;
@@ -97,7 +96,7 @@
   border-left: 1px solid red;
   inline-size: 25px;
   block-size: 25px;
-   margin: 10px;
+  margin: 10px;
   box-sizing: border-box;
   min-width: 0;
 }
@@ -152,7 +151,7 @@
 /*----header_text--*/
 .header_text {
   max-inline-size: 355px;
-  
+
   background-color: var(--title-decor);
   color: #000028;
   font-family: inherit;
@@ -172,10 +171,10 @@ main {
 /**---main_item*/
 
 /*----section_why*/
-  .section-why {
-      margin-top: 40px;
-      margin-bottom: 50px;
-  }
+.section-why {
+  margin-top: 40px;
+  margin-bottom: 50px;
+}
 
 /**main_item_titles**/
 .article {
@@ -186,10 +185,10 @@ main {
 .main_item_title {
   background-color: transparent;
   color: var(--title-decor);
- 
+
   margin-bottom: 20px;
-     font-size: var(--font-size);
-         max-inline-size: 315px;
+  font-size: var(--font-size);
+  max-inline-size: 315px;
 }
 .main_list_title {
   background-color: var(--title-decor);
@@ -200,17 +199,15 @@ main {
   background-color: var(--title-decor);
   color: #000028;
   margin-bottom: 10px;
-    font-size: var(--font-size);
+  font-size: var(--font-size);
 }
-
-
 
 /**-text-**/
 .main_list_item_article_text {
   /* Отступы — сохранятся при любом количестве параграфов */
   margin: 10px 0 20px 0;
   padding: 0;
- 
+
   /* Цвет текста для согласованности с эффектами */
   color: var(--text-color);
 
@@ -232,8 +229,7 @@ main {
 }
 
 .link_article_text:hover {
-   border-bottom: 1px solid var(--text-color);
-   
+  border-bottom: 1px solid var(--text-color);
 }
 
 .link_article_text:focus-visible {
@@ -241,15 +237,14 @@ main {
 }
 
 /*--sectionn3--*/
-.section-advices{
-margin-top: 50px;
+.section-advices {
+  margin-top: 50px;
 }
 .advise_title {
-margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 .title_section-advices_list_item {
-font-weight: 400;
-
+  font-weight: 400;
 }
 
 /**-section4- section-pictures---------------*/
@@ -275,20 +270,19 @@ font-weight: 400;
   padding: 20px;
   position: relative;
   display: grid;
-   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
 }
 .footer_title {
   margin: auto auto;
   margin-left: -10px;
 }
 
-
 /*---media----*/
 
 /*----------media----*/
 @media (width >= 768px) {
   /*--header---*/
- .title {
+  .title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     margin-left: -20px;
   }
@@ -297,14 +291,12 @@ font-weight: 400;
     justify-self: end;
     align-self: center;
   }
- 
 
   .section-why {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 20px;
     margin-top: 40px;
-    
   }
   .section-advices {
     display: grid;
@@ -319,15 +311,13 @@ font-weight: 400;
     display: flex;
     max-inline-size: 100%;
     object-fit: cover;
-    
   }
   .main_list_card {
     display: grid;
     grid-template-rows: 1fr 1fr 1fr 1fr;
-    gap:20px;
+    gap: 20px;
   }
 
- 
   #item-0 {
     grid-row-start: 1;
     grid-column-start: 1;
@@ -360,9 +350,9 @@ font-weight: 400;
   }
 
   .footer_title {
-  margin: auto auto;
-  padding: 20px;
-}
+    margin: auto auto;
+    padding: 20px;
+  }
 }
 
 @media (width >= 1024px) {
@@ -382,16 +372,13 @@ font-weight: 400;
     align-items: start;
     justify-content: center;
   }
- 
 
   .main_list_causes {
     display: grid;
     /*gap: 20px;*/
     gap: var(--main-gap);
-    
+
     grid-template-columns: repeat(3, 1fr);
     list-style-type: none;
   }
-
-
 }

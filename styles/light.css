@@ -12,10 +12,11 @@
   --bg-color: #fff1f7;
   --text-color: rgba(53, 52, 48, 1);
   --bg-image: url("../images/cover-image-light.png");
-  
+
   --nav-hover-color: rgba(50, 49, 45, 0.4);
   --accent-color: rgba(255, 141, 203, 1);
   --title-color: rgba(255, 194, 230, 1);
+  
 }
 
 .theme-light .rec {
@@ -31,8 +32,8 @@
   color: var(--text-color);
 }
 
-.theme-light  .header__theme-menu-button {
-  color:var(--text-color);
+.theme-light .header__theme-menu-button {
+  color: var(--text-color);
 }
 
 .theme-light .main_list_item_article_title {
@@ -45,11 +46,11 @@
   background-color: var(--accent-color);
 }
 .theme-light .frame::before {
-    border-top: 1px solid var(--text-color);
-    border-right: 1px solid var(--text-color);
+  border-top: 1px solid var(--text-color);
+  border-right: 1px solid var(--text-color);
 }
 
 .theme-light .frame::after {
-      border-bottom: 1px solid var(--text-color);
-    border-left: 1px solid var(--text-color);
+  border-bottom: 1px solid var(--text-color);
+  border-left: 1px solid var(--text-color);
 }
