@@ -4,7 +4,7 @@
   min-width: 375px;
   min-height: 100vh;
   /*min-block-size: 100dvb;*/
-  margin: 0;
+  margin:  0 auto ;
   color: var(--text-color);
   font-family: var(--main-font-family, monospace), sans-serif;
   font-size: var(--main-text-size, 18px);
@@ -140,7 +140,7 @@
 }
 
 .title {
-  color: #db00ff;
+  color:  var(--accent-color-text);
   text-transform: lowercase;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   text-shadow: 4px 4px 0 var(--accent-color);

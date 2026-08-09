@@ -6,7 +6,8 @@
   --main-font-family: "IBM Plex mono";
   --main-text-size: clamp(0.875rem, 0.7679rem + 0.4762vw, 1.125rem);
   --bg-color: #000028;
-  --text-color: #fff1f7;
+  --text-color:rgba(241, 178, 206, 1);
+;
 
   --h2-font-size: clamp(1.875rem, 1.6607rem + 0.9524vw, 2.375rem);
   --h3-font-size: clamp(1.5rem, 1.3125rem + 0.8333vw, 1.9375rem);
@@ -17,7 +18,8 @@
   --font-size: 18px;
   --nav-hover-color: rgb(225, 0, 112, 0.4);
 
-  --accent-color-text: #f1b2ce;
+  --accent-color-text: rgba(219, 0, 255, 1);
+;
   --main-gap: 20px;
 
 }
