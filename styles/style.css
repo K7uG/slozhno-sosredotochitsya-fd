@@ -17,6 +17,9 @@
   background-color: var(--accent-color);
   color: var(--title-text-color);
 }
+.rec { 
+    display: flex; 
+  } 
  
 /*----header--------*/ 
  
