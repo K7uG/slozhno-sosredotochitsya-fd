@@ -3,25 +3,34 @@
   и их переопределение под различные устройства 
 */
 
+/*
+  Переменные для вашего проекта
+  и их переопределение под различные устройства
+*/
+
 :root {
   --main-font-family: "IBM Plex Mono", monospace;
-  --main-text-size: 18px;
+  --main-text-size: clamp(0.875rem, 0.7679rem + 0.4762vw, 1.125rem);
   --font-size: 18px;
   --main-gap: 20px;
 
-  /* тёмная тема по умолчанию */
+  --h2-font-size: clamp(1.875rem, 1.6607rem + 0.9524vw, 2.375rem);
+  --h3-font-size: clamp(1.5rem, 1.3125rem + 0.8333vw, 1.9375rem);
+
+  /* тёмная тема по умолчанию (авто-тема без выбора = тёмная) */
   --bg-color: #000028;
   --text-color: rgba(241, 178, 206, 1);
   --bg-image: url("../images/cover-image-dark.png");
   --accent-color: #ff0070;
-  --title-decor: #ff0070;
   --title-color: rgba(219, 0, 255, 1);
   --nav-hover-color: rgba(225, 0, 112, 0.4);
+  --title-text-color: #000028;
 
-  /* новые переменные для тем, где цвета отличаются от акцентного */
-  --rec-display: flex; /* REC виден только в тёмной теме */
-  --section-title-color: #ff0070; /* цвет заголовков секций */
-  --nav-text-color: #ff0070; /* цвет кнопок меню тем */
-  --highlight-color: #000028; /* текст на плашках */
-  --frame-color: #ff0070; /* цвет декоративных уголков рамки */
+  /* переменные для элементов, различающихся между темами */
+  --rec-display: flex;
+  --section-title-color: #ff0070;
+  --nav-text-color: #ff0070;
+  --highlight-color: #000028;
+  --frame-color: #ff0070;
 }
+

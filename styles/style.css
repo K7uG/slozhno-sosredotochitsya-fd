@@ -2,7 +2,7 @@
   min-width: 375px;
   min-height: 100vh;
   /*min-block-size: 100dvb;*/
-  margin: 0;
+  margin:0 auto;
   color: var(--text-color);
   font-family: var(--main-font-family, monospace), sans-serif;
   font-size: var(--main-text-size, 18px);
