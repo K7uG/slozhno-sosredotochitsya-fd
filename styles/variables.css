@@ -25,6 +25,8 @@
   --title-color: rgba(219, 0, 255, 1);
   --nav-hover-color: rgba(225, 0, 112, 0.4);
   --title-text-color: #000028;
+    --button-border-color: #ff0070;
+
 
   /* переменные для элементов, различающихся между темами */
   --rec-display: flex;

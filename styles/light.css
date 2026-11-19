@@ -12,6 +12,8 @@
   --nav-text-color: rgba(53, 52, 48, 1);
   --highlight-color: rgba(53, 52, 48, 1);
   --frame-color: rgba(53, 52, 48, 1);
+    --button-border-color: rgba(50, 49, 45, 1);
+
 }
 
 /* авто-светлая тема: селектор именно :root, без классов темы */
@@ -30,5 +32,7 @@
     --nav-text-color: rgba(53, 52, 48, 1);
     --highlight-color: rgba(53, 52, 48, 1);
     --frame-color: rgba(53, 52, 48, 1);
+      --button-border-color: rgba(50, 49, 45, 1);
+
   }
 }

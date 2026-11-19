@@ -58,9 +58,11 @@
   font-size: 18px;
   text-transform: lowercase;
   background-color: transparent;
-  border: none;
+  
   cursor: pointer;
   font-style: normal;
+  border: 1px solid transparent; /* см. пункт про сдвиг ниже */
+  outline: none;
 }
 
 .header__theme-menu-button:hover {
@@ -69,7 +71,13 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--text-color);
+  outline: none; /* убираем дефолтную браузерную рамку */
+  border-bottom-color: var(--button-border-color);
+}
+
+/* активная кнопка — всегда прямоугольная рамка сплошного цвета темы */
+.header__theme-menu-button_active {
+  border: 1px solid var(--button-border-color);
 }
 
 /*---Decorated zone--*/
@@ -110,6 +118,9 @@
   position: absolute;
   place-self: start end;
   margin: 10px;
+  font-size: 16px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .rec::after {
@@ -341,7 +352,7 @@ section {
   }
   .main_list_card {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr;
     gap: 20px;
   }
 
